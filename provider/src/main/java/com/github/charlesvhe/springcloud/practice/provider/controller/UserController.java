@@ -18,6 +18,8 @@ import java.util.List;
 public class UserController {
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
+    public static String appName="";
+
     @RequestMapping(method = RequestMethod.GET)
     public List<User> query(HttpServletRequest request) {
         Enumeration<String> headerNames = request.getHeaderNames();
@@ -28,7 +30,7 @@ public class UserController {
         }
 
         logger.info("query all " + sbHeader);
-        return Arrays.asList(new User(1L, "account1", "password1"),
+        return Arrays.asList(new User(1L, appName+"_account1", "password1"),
                 new User(2L, "account2", "password2"),
                 new User(3L, "account3", "password3"));
     }

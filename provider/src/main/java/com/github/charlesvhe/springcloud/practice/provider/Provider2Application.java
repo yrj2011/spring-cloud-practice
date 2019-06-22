@@ -10,11 +10,11 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-public class ProviderApplication {
+public class Provider2Application {
     public static void main(String[] args) {
-        System.setProperty("server.port","18081");
-        UserController.appName="app1";
-        SpringApplication.run(ProviderApplication.class, args);
+        System.setProperty("server.port","18082");
+        UserController.appName="app2";
+        SpringApplication.run(Provider2Application.class, args);
     }
 
 }
